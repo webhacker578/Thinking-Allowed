@@ -192,12 +192,7 @@ nav a:focus {
   font-size:2em;
   color : rgb(255,0,0,0.6);
 }
-/* .sub::after{
-  content: "\0020\201D";
-  font-size:2em;
-  color : rgb(255,0,0,0.6);
 
-} */
 
 @media (min-width:992px) and (max-width:1190px){
   .navbar li {
@@ -286,12 +281,7 @@ nav a:focus {
       font-size:1.5em;
       color : red;
     }
-    .sub::after{
-      content: "\0020\201D";
-      font-size:1.5em;
-      color : red;
     
-    }
     
   }
   
@@ -333,8 +323,7 @@ nav a:focus {
     height: 100%;
      border-radius: 15px; 
     z-index: 2; 
-  
-      background: rgba(59, 59, 59, 0.6);
+    background: rgba(46, 46, 46, 0.6);
 
 
 
@@ -555,5 +544,146 @@ nav a:focus {
     font-size: 2.5em;
   }
   
-
- }
+}
+@media (max-width : 480px){
+  html{
+    zoom : 85%;
+  }
+  .center{
+    display : flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    /* opacity: 0; */
+    margin-left : 2em;
+    margin-bottom: 10em;
+  
+  }
+   
+  .wrapper {
+    position:absolute;
+    left : 100%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-gap: 2em;
+    /* flex-shrink: 50%; */
+  }
+  
+  .card {
+    width: 100vw;
+    height: 300px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255,0.9);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 2px 5px rgba(255,255, 255, 0.5);
+  }
+  .card:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block; 
+      width: 100%;
+      height: 100%;
+       border-radius: 15px; 
+      z-index: 2; 
+      background: rgba(46, 46, 46, 0.6);
+  
+  
+  
+  }
+  
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+  }
+  .card .info {
+    display: flex;
+    flex-direction: column;
+    width : 100%;
+    justify-content: center;
+    align-items: center;
+    height : 50%;
+    position: relative;
+    z-index: 3;
+    text-align : center;
+    margin : 1em;
+    transform: translateY(30px);
+    transition: 0.4s;
+  }
+  .card .info h1 {
+    margin: 0px;
+  }
+  .card .info p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  
+  
+  .card h1 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 800;
+    font-family: 'Lato', sans-serif;
+    color: rgba(255, 0, 0, 0.8);
+  }
+  .wrapper > .card:nth-of-type(3) h1{
+    font-size: 2.5em;
+  }
+  .card h1:before {
+    position: absolute;
+    content: attr(data-hover);
+    color: rgb(255, 255, 255);
+    top: 2px;
+    left: 2px;
+  }
+  .info a{
+    outline : 0;
+    text-decoration: none;
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    margin : 0.5em;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .info a:hover{
+      background: black;
+      color: white;
+    
+  }
+  .card h1:before {
+    position: absolute;
+    content: attr(data-hover);
+    color: rgb(255, 255, 255);
+    top: 2px;
+    left: 2px;
+  }
+  
+  .wrapper > .card:nth-of-type(3) h1{
+    font-size: 3em;
+  }
+  .sub{
+    font-size : 2em;
+    line-height : 50px;
+    letter-spacing : 3px;
+  }
+  
+}
