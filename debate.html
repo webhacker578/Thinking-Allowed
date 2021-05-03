@@ -30,7 +30,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" data-hover="Home" href="index.html">Home</a>
+            <a class="nav-link" aria-current="page" data-hover="Home" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-hover="About us" href="about.html">About us</a>
@@ -47,15 +47,13 @@
     </div>
   </nav>
   <section id="debate">
-    <h1>Debate</h1>
+    <h1>Recent debates</h1>
     <div class="video-container">
       <div class="video">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/WP3Qp5HchJI?autoplay=0&mute=1">
+        <h3>Date : <span>april 24, 2021</span></h3>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/WP3Qp5HchJI?autoplay=0">
         </iframe>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/WP3Qp5HchJI?autoplay=0&mute=1">
-        </iframe>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/WP3Qp5HchJI?autoplay=0&mute=1">
-        </iframe>
+        
       </div>
     </div>
   </section>
@@ -67,14 +65,7 @@
     crossorigin="anonymous"></script>
   <script src="app.js"></script>
 
-  <script>
-    $(function () {
-      $(document).scroll(function () {
-        var $nav = $(".navbar");
-        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-      });
-    });
-  </script>
+  
 
 </body>
 

@@ -3,8 +3,16 @@ $(document).ready(function () {
     $('.navbar-toggle-icon').toggleClass('open');
   });
 });
-// const logo = document.querySelectorAll("#logo text");
 
-// for (let i = 0; i<logo.length; i++) {
-//     console.log('Letter ${i} is ${logo{i}.getTotalLenght()}');
-// }
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar");
+    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+  });
+});
+// let form = document.querySelector(".container")
+// let button = document.querySelector(".submit-btn");
+// button.addEventListener("click",function(e){
+//   e.preventDefault();
+//   alert("Hello")
+// })
