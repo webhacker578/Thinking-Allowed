@@ -38,9 +38,9 @@
           <li class="nav-item">
             <a class="nav-link active" data-hover="contact us" href="contact.html">contact us</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-hover="link">link</a>
-          </li>
+          </li> -->
         </ul>
 
       </div>
@@ -49,28 +49,30 @@
   <div class="container">
     <div class="row">
       <h1>contact us</h1>
+        <div class="alert">Your message has been sent</div>
+      
     </div>
-    <form id="contact">
+    <form id="contact" target="_blank" action="https://formsubmit.co/fdb7fb4f0748ee3722eda78d7a0f15c2" method="POST">
       <div class="row input-container">
-
+        <input type="hidden" name="_captcha" value="false">
         <div class="col-xs-12">
           <div class="styled-input wide">
-            <input class="name" type="text" placeholder="Name" required />
+            <input class="name" name="name" type="text" placeholder="Name" required />
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="styled-input">
-            <input class="email" type="email" placeholder="Email" required />
+            <input class="email" name="email" type="email" placeholder="Email" required />
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="styled-input" style="float:right;">
-            <input class="phone " type="text" placeholder="Phone no." required/>
+            <input class="phone" name="phone" type="text" placeholder="Phone no." required />
           </div>
         </div>
         <div class="col-xs-12">
           <div class="styled-input wide">
-            <textarea class="message" placeholder="Message" required></textarea>
+            <textarea class="message" name ="message"placeholder="Message" required></textarea>
           </div>
         </div>
         <div class="col-xs-12">
@@ -87,12 +89,12 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
 
   <script src="app.js"></script>
 

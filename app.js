@@ -34,7 +34,11 @@ form.addEventListener("submit",function(e){
   
   let newContactInfo = contactInfo.push();
   form.reset();
+  document.querySelector('.alert').style.display = 'block';
 
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
   newContactInfo.set({
     username: name,
     email: email,
@@ -42,3 +46,9 @@ form.addEventListener("submit",function(e){
     message: message,
   });
 })
+$(document).on('keyup keypress', 'form input', function(e) {
+  if(e.which == 13) {
+    e.preventDefault();
+    return false;
+  }
+});
