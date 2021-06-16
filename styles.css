@@ -687,7 +687,7 @@ nav a:focus {
   
   }
   #debate,#speech{
-    zoom : 75%;
+    zoom : 85%;
   }
   .sub::before{
     content: "\201C";
@@ -735,17 +735,22 @@ nav a:focus {
      */
 
   }
+  }
   .wrapper > .card:nth-of-type(3) h1:before{
     content: attr(data-hover);
-    color :rgba(255, 253, 253, 1);
+    color :rgb(143, 133, 133);
 
+    
+  }
+  .wrapper > .card h1{
+    font-weight:800;
     
   }
   .active::before{
     max-width:100%;
   }
   
-}
+
 @media (min-width:300px) and (max-width:991px){
   .wrapper  .card:nth-of-type(3) h1{
     font-size: 3em;

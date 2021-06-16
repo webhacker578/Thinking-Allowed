@@ -20,7 +20,6 @@ var firebaseConfig2 = {
     let contact = document.querySelector("#regcontact").value;
     
     let newRegInfo = registerInfo.push();
-    // document.querySelector('.alert').style.display = 'block';
   
     setTimeout(function(){
       registerForm.reset();   },3000);
