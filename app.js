@@ -10,7 +10,7 @@ $(function () {
     $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
   });
 });
-var firebaseConfig = {
+var firebaseConfig1 = {
   apiKey: "AIzaSyDAj-MVIfgsrc5ZlmFgQWm5cUxfQdQPVsQ",
   authDomain: "thinking-allowed.firebaseapp.com",
   projectId: "thinking-allowed",
@@ -20,7 +20,7 @@ var firebaseConfig = {
   measurementId: "G-FHW74TTRVN"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig1);
 firebase.analytics();
 let contactInfo = firebase.database().ref("contacts");
 
@@ -52,3 +52,7 @@ $(document).on('keyup keypress', 'form input', function(e) {
     return false;
   }
 });
+
+//Register form
+
+
