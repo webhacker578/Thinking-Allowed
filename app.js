@@ -53,6 +53,5 @@ $(document).on('keyup keypress', 'form input', function(e) {
   }
 });
 
-//Register form
 
 
