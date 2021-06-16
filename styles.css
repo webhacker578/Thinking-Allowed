@@ -8,6 +8,7 @@
 body{
   background : black;
   overflow-x: hidden;
+  min-height:100vh;
 }
 nav a:hover,
 nav a:focus {
@@ -738,7 +739,7 @@ nav a:focus {
   }
   .wrapper > .card:nth-of-type(3) h1:before{
     content: attr(data-hover);
-    color :rgb(143, 133, 133);
+    color :rgb(255, 254, 254);
 
     
   }

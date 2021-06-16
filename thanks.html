@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thinking Allowed</title>
-  <link rel="shortcut icon" type="image/x-icon" href="TA.png"/>
+  <link rel="shortcut icon" type="image/x-icon" href="TA.png" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display:wght@500&display=swap"
@@ -30,10 +30,11 @@
   <!-- <a href='https://www.freepik.com/vectors/business'>Business vector created by vectorjuice - www.freepik.com</a> -->
   <!-- <a href='https://www.freepik.com/vectors/school'>School vector created by vectorjuice - www.freepik.com</a> -->
 
- 
+
   <div class="thanks text-center">
-    <h1 class="display-3">Thank You!</h1>
-    <p class="lead"><strong>Please check your email</strong> for further instructions.</p>
+    <h1 class="display-3" style="font-weight:bold; letter-spacing:3px; font-family:Montserrat; margin:1em;">Thank You!
+    </h1>
+    <p class="lead" style="color:white;"><strong>Please check your email</strong> for further instructions.</p>
     <p>
       Having trouble? <a href="https://thinking-allowed.live/contact.html">Contact us</a>
     </p>
@@ -42,24 +43,53 @@
     </p>
   </div>
   <style>
-      .thanks{
-          
-          color : red;
-          width:100%;
-          height:100%;         
-          margin:auto;
-      }
-      a{
-          border:none;
-          text-decoration: none;
+    .thanks a {
+      position: relative;
+    }
 
-          color : white;
-      }
-      a:hover{
-        text-decoration: underline;
-          color : rgb(151, 151, 151);
-      }
-      
+    .thanks a {
+      z-index: 1;
+      position: relative;
+    }
+
+    .thanks a::after {
+      content: "";
+      position: absolute;
+      left: -0.1px;
+      right: -0.1px;
+      bottom: 0;
+      height: 40%;
+      transform: scaleY(.3);
+      transition: transform .6s cubic-bezier(0.53, 0.21, 0, 1);
+      transform-origin: bottom;
+      background-color: hsl(0, 100%, 100%);
+    }
+
+    .thanks a:hover::after {
+      transform: scaleY(2.3);
+      /* transform: scaleX(1.2); */
+      z-index: -1;
+    }
+
+    .thanks {
+
+      color: red;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
+
+    a {
+      border: none;
+      text-decoration: none;
+      color: white;
+    }
+
+    .thanks a:hover {
+      text-decoration: none;
+      color: black;
+
+    }
   </style>
 
 
