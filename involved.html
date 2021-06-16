@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thinking Allowed</title>
+  <link rel="shortcut icon" type="image/x-icon" href="TA.png"/>
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display:wght@500&display=swap"
     rel="stylesheet">
@@ -62,6 +64,9 @@
 
 
   <!---Register form--------------------------------------------------------------------------------------------------------------------->
+  <div class="row">
+    <div class="alert">Your message has been sent</div>
+  </div>
   <div class="background">
     <div class="container">
       <div class="screen">
@@ -74,19 +79,21 @@
 
           </div>
           <div class="screen-body-item">
-            <form class="app-form" id="app-form">
-
+            <form class="app-form" target="_blank" id="app-form" action="https://formsubmit.co/fdb7fb4f0748ee3722eda78d7a0f15c2" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
               <div class="app-form-group">
-                <input class="app-form-control" type="text" id="regname" placeholder="NAME" required>
+                <input class="app-form-control" name="name" type="text" id="regname" placeholder="NAME" required>
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" type="text" id="regschool" placeholder="SCHOOL NAME" required>
+                <input class="app-form-control" name="school name"  type="text" id="regschool" placeholder="SCHOOL NAME" required>
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" type="email" id="regemail" placeholder="SCHOOL EMAIL" required>
+                <input class="app-form-control" name="school email"  type="email" id="regemail" placeholder="SCHOOL EMAIL" required>
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" type="text" id="regcontact" placeholder="CONTACT NO" required>
+                <input class="app-form-control" name="contact" type="text" id="regcontact" placeholder="CONTACT NO" required>
               </div>
 
               <div>
@@ -99,7 +106,7 @@
       </div>
     </div>
   </div>
-  </div>
+  
   <style>
     *,
     *:before,
@@ -228,10 +235,11 @@
     .app-form-button:hover {
       color: #9b0000;
     }
-    .app-form-button:active {
+    .app-form-button:active,.app-form-button:focus {
       border:none;
+      outline: none;
     }
-
+     
     @media screen and (max-width: 520px) {
       .screen-body {
         flex-direction: column;

@@ -13,25 +13,27 @@ var firebaseConfig2 = {
   
   let registerForm  = document.querySelector("#app-form");
   registerForm.addEventListener("submit",function(e){
-    e.preventDefault();
+    // e.preventDefault();
     let regName = document.querySelector("#regname").value;
     let schoolName = document.querySelector("#regschool").value;
     let schoolEmail = document.querySelector("#regemail").value;
     let contact = document.querySelector("#regcontact").value;
     
     let newRegInfo = registerInfo.push();
-    registerForm.reset();
     // document.querySelector('.alert').style.display = 'block';
   
-    // setTimeout(function(){
-    //   document.querySelector('.alert').style.display = 'none';
-    // },3000);
+    setTimeout(function(){
+      registerForm.reset();   },3000);
+      
     newRegInfo.set({
       regName: regName ,
       schoolName: schoolName,
       schoolEmail: schoolEmail,
       contact: contact,
     });
+    
+
+
   })
   $(document).on('keyup keypress', 'form input', function(e) {
     if(e.which == 13) {
