@@ -19,10 +19,6 @@ form.addEventListener("submit", function () {
 })
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b008712e6f72dbf431f5d7606d49f0f70770fc86
 $(document).on('keyup keypress', 'form input', function (e) {
   if (e.which == 13) {
     e.preventDefault();
