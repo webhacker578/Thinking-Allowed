@@ -46,14 +46,31 @@
     p{
         font-family: "Poppins",sans-serif;
         color : red;
-        font-size:2em;
+        font-size:2rem;
         
+    }
+    img{
+        position: absolute;
+        width:90%;
+        max-height:80%;
+        min-height:35%;
+        top:15%;
+        margin-top:2em;
+        flex-shrink: 1;
+    }
+    @media (max-width:900px){
+        p{
+        
+        font-size:1.2rem;
+        
+    }
     }
 </style>
 
 
 <body>
-    <p>Voting ended.</p>
+    <p>Latest poll results</p>
+    <img src="results.png" alt="poll results">
 
 
 </body>
